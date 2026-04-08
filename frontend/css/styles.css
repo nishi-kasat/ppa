@@ -1,0 +1,18 @@
+body { min-height: 100vh; color: #f4f7fb; background: radial-gradient(circle at 35% 30%, #0b3655 0%, #13253f 35%, #101d31 70%, #0c1523 100%); }
+.top-nav { background:#fff; border-bottom:1px solid #e8ecf3; }
+.brand { color:#1b2431; font-weight:700; font-size:2rem; text-decoration:none; }
+.page-wrap { min-height:100vh; }
+.card-glow { background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); border:1px solid rgba(255,255,255,.1); border-radius:18px; box-shadow:0 10px 25px rgba(0,0,0,.2); }
+.panel { background:#101a2b; }
+.panel-soft { background:#15233a; }
+.page-title { font-weight:800; font-size:clamp(2rem,4vw,3.6rem); }
+.section-title { font-weight:700; }
+.hero-area { min-height: calc(100vh - 90px); display:grid; place-items:center; }
+.hero-title { font-size: clamp(2.5rem, 6vw, 5rem); font-weight:800; }
+.hero-subtitle { color: #d9e5f2; font-size: clamp(1.1rem, 2.5vw, 2rem); }
+.table-dark-custom { --bs-table-bg:#0f1c30; --bs-table-color:#edf1f7; --bs-table-border-color:rgba(255,255,255,.08); }
+.form-control,.form-select,.form-control:focus,.form-select:focus { background:#d6dde8; color:#111; border-color:#c6d0df; }
+.link-btn { text-decoration:none; }
+.tile-card { min-height:190px; }
+.btn-outline-white { border:2px solid rgba(255,255,255,.75); color:#fff; }
+.btn-outline-white:hover { background:rgba(255,255,255,.12); color:#fff; }
