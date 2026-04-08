@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_session import Session
 import redis
 
@@ -10,7 +10,12 @@ from routes.company_routes import company_routes
 from routes.student_routes import student_routes
 from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder="../frontend/templates",
+    static_folder="../frontend",
+    static_url_path="/frontend",
+)
 
 CORS(app, supports_credentials=True)
 
@@ -36,6 +41,15 @@ app.register_blueprint(user_routes, url_prefix="/user")
 app.register_blueprint(admin_routes, url_prefix="/admin")
 app.register_blueprint(company_routes, url_prefix="/company")
 app.register_blueprint(student_routes, url_prefix="/student")
+
+# Frontend entry (Vue CDN + router history mode)
+@app.route("/", defaults={"path": ""})
+@app.route("/<path:path>")
+def serve_frontend(path):
+    if path.startswith(("auth", "user", "admin", "company", "student", "frontend")):
+        return {"message": "not found"}, 404
+    return render_template("index.html")
+
 
 # Run app
 if __name__ == "__main__":
