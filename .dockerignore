@@ -1,0 +1,7 @@
+.git
+.github
+**/__pycache__
+**/*.pyc
+backend/placement_portal_database.db
+*.db
+.env
