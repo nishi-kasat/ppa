@@ -1,0 +1,5 @@
+window.StudentDashboardPage = { template: `<section><div class="text-center mb-4"><h1 class="page-title">Student Dashboard</h1></div><div class="row g-4">
+<div class="col-lg-4"><router-link to="/student/drives" class="link-btn"><div class="card-glow panel p-4 tile-card d-flex flex-column justify-content-between"><h3 class="text-center text-white">Available Drives</h3><button class="btn btn-primary">View & Apply</button></div></router-link></div>
+<div class="col-lg-4"><router-link to="/student/applications" class="link-btn"><div class="card-glow panel p-4 tile-card d-flex flex-column justify-content-between"><h3 class="text-center text-white">Application Status</h3><button class="btn btn-primary">View History</button></div></router-link></div>
+<div class="col-lg-4"><router-link to="/student/profile" class="link-btn"><div class="card-glow panel p-4 tile-card d-flex flex-column justify-content-between"><h3 class="text-center text-white">Profile & Resume</h3><button class="btn btn-primary">Manage</button></div></router-link></div>
+</div></section>` };
